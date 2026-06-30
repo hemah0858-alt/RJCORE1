@@ -9,8 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@/Components/*": ["./src/Components/*"],
-      "@/components/*": ["./src/Components/*"]
+      "@/Components/*": ["./src/Components/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
