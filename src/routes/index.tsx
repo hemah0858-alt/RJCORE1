@@ -18,7 +18,7 @@ import pChips from "@/assets/product-chips.jpg";
 import pFiber from "@/assets/product-fiber.jpg";
 import pGrowbag from "@/assets/product-growbag.jpg";
 import pDiscs from "@/assets/product-discs.jpg";
-import logo from  "@/assets/RJ Logo.jpeg";
+import logo from  "@/assets/RJ Logo.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
