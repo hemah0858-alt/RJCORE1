@@ -1,10 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StartClient } from "@tanstack/react-start/client";
+import { StrictMode } from "react";
+import { hydrateRoot } from "react-dom/client";
 
-createRoot(document.getElementById('root')).render(
+import { startInstance } from "./start";
+
+hydrateRoot(
+  document,
   <StrictMode>
-    <App />
+    <StartClient startInstance={startInstance} />
   </StrictMode>,
-)
+);
