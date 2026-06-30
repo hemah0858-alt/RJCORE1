@@ -48,8 +48,6 @@ const PRODUCTS = [
   { name: "High EC Cocopeat", img: pLowEc, desc: "Unwashed cocopeat for industrial mulching & soil conditioning." },
   { name: "Coco Chips", img: pChips, desc: "Chunky coir pieces ideal for orchids, anthuriums and aeration." },
   { name: "Coco Fiber", img: pFiber, desc: "Long natural fibers for mattresses, ropes and erosion control." },
-  { name: "Coco Grow Bags", img: pGrowbag, desc: "Open-top grow bags for tomato, cucumber & berry hydroponics." },
-  { name: "Cocopeat Discs", img: pDiscs, desc: "Compact discs for seed-starting and propagation trays." },
 ];
 
 const WHATSAPP = "+919791401001";
