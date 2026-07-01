@@ -573,9 +573,6 @@ function Footer() {
     alt="RJ Coir Logo"
     className="h-10 w-auto"
   />
-  <span className="font-display font-semibold text-lg">
-    RJ Coir
-  </span>
 </div>
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} RJ Coir · Tamil Nadu, India · All rights reserved.
