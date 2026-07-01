@@ -11,6 +11,7 @@ import {
   Leaf, Shield, Truck, Package, BadgeCheck, Globe2,
   Phone, Mail, MapPin, MessageCircle, ArrowRight, Sprout, Menu, X,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import heroImg from "@/assets/hero-cocopeat.jpg";
 import pBlock from "@/assets/product-block.jpg";
 import pLowEc from "@/assets/Low ec.jpg";
@@ -432,11 +433,11 @@ function Contact() {
           <ul className="mt-8 space-y-4 text-sm">
             <ContactRow icon={Phone} label="Mobile" value={PHONE_DISPLAY} href={`tel:${WHATSAPP}`} />
             <ContactRow
-              icon={MessageCircle}
-              label="WhatsApp"
-              value={PHONE_DISPLAY}
-              href={`https://wa.me/${WHATSAPP.replace("+", "")}`}
-            />
+  icon={FaWhatsapp}
+  label="WhatsApp"
+  value={PHONE_DISPLAY}
+  href={`https://wa.me/${WHATSAPP.replace("+", "")}`}
+/>
             <ContactRow icon={Mail} label="Email" value={EMAIL} href={`mailto:${EMAIL}`} />
             <ContactRow icon={MapPin} label="Factory" value={ADDRESS} />
           </ul>
