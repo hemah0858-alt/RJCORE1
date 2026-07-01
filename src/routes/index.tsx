@@ -531,9 +531,6 @@ function InquiryForm() {
     <option value="5 kg Cocopeat Block - High EC">5 kg Cocopeat Block - High EC</option>
     <option value="Coco Chips">Coco Chips</option>
     <option value="Coco Fiber">Coco Fiber</option>
-    <option value="Grow Bags">Grow Bags</option>
-    <option value="Cocopeat Discs">Cocopeat Discs</option>
-    <option value="Other">Other</option>
   </select>
 </div>
         <div className="sm:col-span-2 grid gap-2">
