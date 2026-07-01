@@ -95,9 +95,6 @@ function Header() {
           <a href="#contact" className="text-muted-foreground hover:text-foreground">Contact</a>
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild size="sm" className="hidden rounded-full sm:inline-flex">
-            <a href="#contact">Learn More</a>
-          </Button>
           <button
             type="button"
 
