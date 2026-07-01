@@ -59,7 +59,7 @@ const PRODUCTS = [
 const WHATSAPP = "+919791401001";
 const PHONE_DISPLAY = "+91 97914 01001";
 const EMAIL = "info@rjcoir.com";
-const ADDRESS = "RJ Coir Factory, Pollachi, Tamil Nadu, India";
+const ADDRESS = "RJ Coir Factory, Tenkasi, Tamil Nadu, India";
 
 function Index() {
   return (
@@ -517,9 +517,25 @@ function InquiryForm() {
         <Field name="email" label="Email" type="email" required maxLength={255} />
         <Field name="company" label="Company" maxLength={120} />
         <Field name="country" label="Country" maxLength={80} />
-        <div className="sm:col-span-2">
-          <Field name="product" label="Product of interest" placeholder="e.g. 5 kg cocopeat blocks, low EC" maxLength={160} />
-        </div>
+       <div className="sm:col-span-2 grid gap-2">
+  <Label htmlFor="product">Product of Interest</Label>
+
+  <select
+    id="product"
+    name="product"
+    className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+  >
+    <option value="">Select a Product</option>
+    <option value="5 kg Cocopeat Block - Standard">5 kg Cocopeat Block - Standard</option>
+    <option value="5 kg Cocopeat Block - Low EC">5 kg Cocopeat Block - Low EC</option>
+    <option value="5 kg Cocopeat Block - High EC">5 kg Cocopeat Block - High EC</option>
+    <option value="Coco Chips">Coco Chips</option>
+    <option value="Coco Fiber">Coco Fiber</option>
+    <option value="Grow Bags">Grow Bags</option>
+    <option value="Cocopeat Discs">Cocopeat Discs</option>
+    <option value="Other">Other</option>
+  </select>
+</div>
         <div className="sm:col-span-2 grid gap-2">
           <Label htmlFor="message">Message</Label>
           <Textarea id="message" name="message" required maxLength={1000} rows={5}
@@ -554,12 +570,16 @@ function Footer() {
   return (
     <footer className="border-t bg-background">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:px-6 py-8 sm:flex-row">
-        <div className="flex items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground">
-            <Leaf className="h-4 w-4" />
-          </span>
-          <span className="font-display font-semibold">RJ Coir</span>
-        </div>
+        <div className="flex items-center gap-3">
+  <img
+    src={logo}
+    alt="RJ Coir Logo"
+    className="h-10 w-auto"
+  />
+  <span className="font-display font-semibold text-lg">
+    RJ Coir
+  </span>
+</div>
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} RJ Coir · Tamil Nadu, India · All rights reserved.
         </p>
