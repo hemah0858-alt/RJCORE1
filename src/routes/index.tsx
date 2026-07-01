@@ -13,12 +13,14 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-cocopeat.jpg";
 import pBlock from "@/assets/product-block.jpg";
-import pLowEc from "@/assets/product-lowec.jpg";
+import pLowEc from "@/assets/Low ec.jpg";
+import pHighEc from "@/assets/High-EC-Cocopeat.jpg";
 import pChips from "@/assets/product-chips.jpg";
 import pFiber from "@/assets/product-fiber.jpg";
 import pGrowbag from "@/assets/product-growbag.jpg";
 import pDiscs from "@/assets/product-discs.jpg";
 import logo from  "@/assets/RJ Logo.png";
+import FiveKgBlock from "@/Components/FiveKgBlock";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -43,13 +45,17 @@ export const Route = createFileRoute("/")({
 });
 
 const PRODUCTS = [
-  { name: "5 kg Cocopeat Blocks", img: pBlock, desc: "Compressed blocks expanding to ~75 L. Easy to ship, store and rehydrate." },
-  { name: "Low EC Cocopeat", img: pLowEc, desc: "Washed & buffered for sensitive crops. EC < 0.5 mS/cm." },
-  { name: "High EC Cocopeat", img: pLowEc, desc: "Unwashed cocopeat for industrial mulching & soil conditioning." },
+  {
+    name: "5 kg Cocopeat Blocks",
+    variants: [
+      { label: "Standard", img: pBlock, desc: "Compressed 5 kg blocks expanding to ~75 L. Easy to ship, store and rehydrate." },
+      { label: "Low EC", img: pLowEc, desc: "Washed & buffered for sensitive crops. EC < 0.5 mS/cm." },
+      { label: "High EC", img: pHighEc, desc: "Unwashed cocopeat for industrial mulching & soil conditioning." },
+    ],
+  },
   { name: "Coco Chips", img: pChips, desc: "Chunky coir pieces ideal for orchids, anthuriums and aeration." },
   { name: "Coco Fiber", img: pFiber, desc: "Long natural fibers for mattresses, ropes and erosion control." },
 ];
-
 const WHATSAPP = "+919791401001";
 const PHONE_DISPLAY = "+91 97914 01001";
 const EMAIL = "info@rjcoir.com";
@@ -285,6 +291,61 @@ function About() {
   );
 }
 
+function ProductCard({ p, i }: { p: any; i: number }) {
+  const hasVariants = Array.isArray(p.variants);
+  const [variantIndex, setVariantIndex] = useState(0);
+  const active = hasVariants ? p.variants[variantIndex] : p;
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.5, delay: (i % 3) * 0.08, ease: "easeOut" }}
+      whileHover={{ y: -6 }}
+      className="group overflow-hidden rounded-2xl border bg-card transition hover:-translate-y-1"
+      style={{ boxShadow: "var(--shadow-card)" }}
+    >
+      <div className="aspect-[4/3] overflow-hidden bg-muted">
+        <img
+          key={active.img}
+          src={active.img}
+          alt={hasVariants ? `${p.name} - ${active.label}` : p.name}
+          loading="lazy"
+          width={1024}
+          height={1024}
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+        />
+      </div>
+      <div className="p-5">
+        <div className="flex items-center justify-between gap-3">
+          <h3 className="text-lg font-semibold">{p.name}</h3>
+          {hasVariants && (
+            <select
+              value={variantIndex}
+              onChange={(e) => setVariantIndex(Number(e.target.value))}
+              className="cursor-pointer rounded-full border bg-background px-3 py-1 text-xs font-medium text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              {p.variants.map((v: any, idx: number) => (
+                <option key={v.label} value={idx}>
+                  {v.label}
+                </option>
+              ))}
+            </select>
+          )}
+        </div>
+        <p className="mt-1.5 text-sm text-muted-foreground">{active.desc}</p>
+        <a
+          href="#contact"
+          className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+        >
+          Learn More <ArrowRight className="h-3.5 w-3.5" />
+        </a>
+      </div>
+    </motion.article>
+  );
+}
+
 function Products() {
   return (
     <section id="products" className="bg-muted/40 py-20 md:py-28">
@@ -303,37 +364,7 @@ function Products() {
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PRODUCTS.map((p, i) => (
-            <motion.article
-              key={p.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: (i % 3) * 0.08, ease: "easeOut" }}
-              whileHover={{ y: -6 }}
-              className="group overflow-hidden rounded-2xl border bg-card transition hover:-translate-y-1"
-              style={{ boxShadow: "var(--shadow-card)" }}
-            >
-              <div className="aspect-[4/3] overflow-hidden bg-muted">
-                <img
-                  src={p.img}
-                  alt={p.name}
-                  loading="lazy"
-                  width={1024}
-                  height={1024}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="text-lg font-semibold">{p.name}</h3>
-                <p className="mt-1.5 text-sm text-muted-foreground">{p.desc}</p>
-                <a
-                  href="#contact"
-                  className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-                >
-                  Learn More <ArrowRight className="h-3.5 w-3.5" />
-                </a>
-              </div>
-            </motion.article>
+            <ProductCard key={p.name} p={p} i={i} />
           ))}
         </div>
       </div>
