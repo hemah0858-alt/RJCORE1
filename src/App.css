@@ -160,7 +160,24 @@
     height: 48px;
   }
 }
+/* ==========================================
+   FORCE LOGO LEFT & HAMBURGER RIGHT
+   ========================================== */
 
+/* Pull logo further left */
+header img,
+.logo-container,
+.brand-logo,
+header a:first-child {
+  margin-left: -15px !important; 
+}
+
+/* Pull hamburger button further right */
+header button,
+.hamburger-menu,
+.navbar-toggler {
+  margin-right: -15px !important; 
+}
 .ticks {
   position: relative;
   width: 100%;
@@ -194,7 +211,7 @@ header,
   justify-content: space-between !important;
   align-items: center !important;
   width: 100% !important;
-  padding-left: 10px !important;  /* Controls how far left the logo goes */
-  padding-right: 10px !important; /* Controls how far right the hamburger goes */
+  padding-left: 0px !important;  /* Controls how far left the logo goes */
+  padding-right:0px !important; /* Controls how far right the hamburger goes */
   box-sizing: border-box !important;
 }
