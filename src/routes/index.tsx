@@ -21,7 +21,6 @@ import pFiber from "@/assets/product-fiber.jpg";
 import pGrowbag from "@/assets/product-growbag.jpg";
 import pDiscs from "@/assets/product-discs.jpg";
 import logo from  "@/assets/RJ coir .png";
-import FiveKgBlock from "@/Components/FiveKgBlock";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -279,7 +278,7 @@ function About() {
           className="grid grid-cols-2 gap-4"
         >
           {[
-            { n: "20+", l: "Countries served" },
+            { n: "10+", l: "Countries served" },
             { n: "5", l: "Product variants" },
             { n: "100%", l: "Export quality" },
             { n: "On-time", l: "Shipments" },
