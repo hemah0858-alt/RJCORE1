@@ -20,7 +20,7 @@ import pChips from "@/assets/product-chips.jpg";
 import pFiber from "@/assets/product-fiber.jpg";
 import pGrowbag from "@/assets/product-growbag.jpg";
 import pDiscs from "@/assets/product-discs.jpg";
-import logo from  "@/assets/RJ Logo.png";
+import logo from  "@/assets/RJ coir .png";
 import FiveKgBlock from "@/Components/FiveKgBlock";
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -280,7 +280,7 @@ function About() {
         >
           {[
             { n: "20+", l: "Countries served" },
-            { n: "7", l: "Product variants" },
+            { n: "5", l: "Product variants" },
             { n: "100%", l: "Export quality" },
             { n: "On-time", l: "Shipments" },
           ].map((s, i) => (
