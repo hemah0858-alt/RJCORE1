@@ -20,7 +20,7 @@ import pChips from "@/assets/product-chips.jpg";
 import pFiber from "@/assets/product-fiber.jpg";
 import pGrowbag from "@/assets/product-growbag.jpg";
 import pDiscs from "@/assets/product-discs.jpg";
-import logo from  "@/assets/Rj coir.png";
+import logo from  "@/assets/rj-coir.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
