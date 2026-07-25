@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
         content:
           "RJ Coir manufactures and exports premium cocopeat blocks, grow bags, coco chips, fiber and discs from Tamil Nadu, India. Export-quality, custom-packed, on-time shipments worldwide.",
       },
-      { property: "og:title", content: "RJ Coir — Premium Cocopeat Exporter from India" },
+      { property: "og:title", content: "RJ Coir — Premium Cocopeat for sustainable growth" },
       {
         property: "og:description",
         content:
@@ -205,7 +205,7 @@ function Hero() {
             transition={{ delay: 0.5, duration: 0.7 }}
             className="mt-3 font-display text-sm italic text-white/70"
           >
-            “Premium Cocopeat Solutions for Global Agriculture.”
+            “Premium Cocopeat for sustainable growth.”
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -253,7 +253,7 @@ function About() {
             RJ Coir is a manufacturer and exporter of premium cocopeat products,
             sourced directly from coconut-growing regions of South India. From
             family-run greenhouses to large-scale commercial farms, growers in
-            dozens of countries rely on our consistency, quality and on-time
+            countries rely on our consistency, quality and on-time
             delivery.
           </p>
           <ul className="mt-6 space-y-3 text-sm">
@@ -390,7 +390,7 @@ function WhyUs() {
     { icon: Package, t: "Custom packaging", d: "Private-label, OEM bundles and container-optimized formats." },
     { icon: Globe2, t: "Export-quality products", d: "Tested for EC, pH, moisture and compression consistency." },
     { icon: BadgeCheck, t: "Competitive pricing", d: "Direct-from-factory rates with transparent FOB quotes." },
-    { icon: Truck, t: "On-time shipments", d: "Reliable logistics from Tuticorin & Cochin ports." },
+    { icon: Truck, t: "On-time shipments", d: "Reliable logistics from Nearest ports." },
     { icon: Shield, t: "Quality you can trust", d: "Batch-wise QC reports with every export consignment." },
   ];
   return (
@@ -441,7 +441,7 @@ function Contact() {
             Request a quote or sample
           </h2>
           <p className="mt-4 max-w-md text-secondary-foreground/80">
-            Tell us about your crop, container volume and destination port. We
+            Tell us about your crop, container volume and destination place. We
             usually respond within one business day.
           </p>
           <ul className="mt-8 space-y-4 text-sm">
