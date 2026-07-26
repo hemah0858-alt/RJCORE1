@@ -390,7 +390,7 @@ function WhyUs() {
     { icon: Package, t: "Custom packaging", d: "Private-label, OEM bundles and container-optimized formats." },
     { icon: Globe2, t: "Export-quality products", d: "Tested for EC, pH, moisture and compression consistency." },
     { icon: BadgeCheck, t: "Competitive pricing", d: "Direct-from-factory rates with transparent FOB quotes." },
-    { icon: Truck, t: "On-time shipments", d: "Reliable logistics from earest ports." },
+    { icon: Truck, t: "On-time shipments", d: "Reliable logistics from nearest ports." },
     { icon: Shield, t: "Quality you can trust", d: "Batch-wise QC reports with every export consignment." },
   ];
   return (
